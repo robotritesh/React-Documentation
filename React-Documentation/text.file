@@ -1,0 +1,62 @@
+1.What is React?
+ReactJS is an open-source JavaScript library used to create user interfaces in a declarative and efficient way. It is a component-based front-end library responsible only for the view layer of a Model View Controller(MVC) architecture. React is used to create modular user interfaces and promotes the development of reusable UI components that display dynamic data.
+
+2.Who made React?
+React was created by Jordan Walke, a software engineer at Meta, who released an early prototype of React called "FaxJS".
+
+3.What is Babel?
+Babel is a very famous transpiler that basically allows us to use future JavaScript in today’s browsers. In simple words, it can convert the latest version of JavaScript code into the one that the browser understands. Transpiler is a tool that is used to convert source code into another source code that is of the same level. The latest standard version that JavaScript follows is ES2020 which is not fully supported by all browsers hence we make use of a tool such as ‘babel’ so that we can convert it into the code that today’s browser understands.
+
+4.How does Babel convert html code in React into valid code?
+Babel is a key tool that can translate JSX syntax, which is used to create HTML-like code in React components, into valid JavaScript code that can be executed in preferred browsers. By converting the JSX code into JavaScript functions that return the same HTML-like structures.
+
+5.What is ReactDOM used for? Write an example?
+ReactDOM is a package in React that provides DOM-specific methods that can be used at the top level of a web app to enable an efficient way of managing DOM elements of the web page. ReactDOM provides the developers with an API containing the various methods to manipulate DOM. 
+Example:
+          Import necessary dependencies
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Define a simple React component
+const MyComponent = () => {
+  return <h1>Hello, React!</h1>;
+};
+
+// Use ReactDOM to render the component into the DOM
+ReactDOM.render(
+  <MyComponent />,
+  document.getElementById('root'));// assuming you have a <div id="root"></div> in your HTML
+
+6.What are the packages that you need to import for react to work with?
+->React Testing Library. The React Testing Library is a lightweight solution for testing React components. 
+->Cypress. Cypress is a fast, easy, and reliable testing library for anything that runs in a browser. 
+->Redux. 
+->Formik. 
+->Recharts. 
+->react-i18next.
+
+7.How do you add react to a web application?
+Step I: Add a DOM Container to the HTML. First, open the HTML page you want to edit. 
+Step II: Add the Script Tags. Next, add three <script> tags to the HTML page right before the closing </body> tag: ...
+Step III: Create a React Component. Create a file called like_button.js next to your HTML page.
+
+8.What is React.createElement?
+createElement is a fundamental method of React JS. The main use of React. createElement is the Creation of a React component. It is the JavaScript format for creating react components. Also, the JSX react component when transpired invokes this only method for creating the component.
+
+9.What are the three properties that createElement accept?
+I.type: The type argument must be a valid React component type. For example, it could be a tag name string (such as 'div' or 'span'), or a React component (a function, a class, or a special component like Fragment).
+II.props: The props argument must either be an object or null. If you pass null, it will be treated the same as an empty object. React will create an element with props matching the props you have passed. Note that ref and key from your props object are special and will not be available as element.props.ref and element.props.key on the returned element. They will be available as element.ref and element.key.
+III.optional ...children: Zero or more child nodes. They can be any React nodes, including React elements, strings, numbers, portals, empty nodes (null, undefined, true, and false), and arrays of React nodes.
+
+What is the meaning of render and root?
+Render:
+In React, "render" refers to the process of converting React components into actual DOM elements that can be displayed on the web page.
+The ReactDOM.render() function is used to render a React element (or a tree of elements) into a specified DOM node. It takes two main arguments: the React element to render and the DOM node where the rendering should take place.
+
+Root:
+In the context of the example, "root" typically refers to a DOM element where the React application is attached or mounted.
+The document.getElementById('root') part in the example is looking for an HTML element with the id "root" in the actual HTML document. This element is where the React application will be mounted.
+It's a common practice to have a single root element in your HTML where your entire React application is rendered. This makes it easy to manage and manipulate the React content within a specific area of your web page.
+
+
+
